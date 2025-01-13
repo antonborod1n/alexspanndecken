@@ -1,0 +1,65 @@
+/* COLOR */
+$main: #111111;
+$accent: #ffea00;
+$whiteMain: #ffffff;
+$white: rgba(255, 255, 255, 0.8);
+$white1: rgba(255, 255, 255, 0.7);
+$black: #1e1e1e;
+$black1: #353535;
+$gray: #acacac;
+$red: #fa0000;
+
+/* FONTS */
+%inter-800 {
+  font-family: 'Inter-ExtraBold';
+  font-weight: 800;
+}
+%inter-700 {
+  font-family: 'Inter-Bold';
+  font-weight: 700;
+}
+%inter-600 {
+  font-family: 'Inter-SemiBold';
+  font-weight: 600;
+}
+%inter-500 {
+  font-family: 'Inter-Medium';
+  font-weight: 500;
+}
+%inter-400 {
+  font-family: 'Inter-Regular';
+  font-weight: 400;
+}
+%inter-300 {
+  font-family: 'Inter-Light';
+  font-weight: 300;
+}
+%overpass-700 {
+  font-family: 'Overpass-Bold';
+  font-weight: 700;
+}
+%overpass-600 {
+  font-family: 'Overpass-SemiBold';
+  font-weight: 600;
+}
+%overpass-500 {
+  font-family: 'Overpass-Medium';
+  font-weight: 500;
+}
+%overpass-400 {
+  font-family: 'Overpass-Regular';
+  font-weight: 400;
+}
+%overpass-300 {
+  font-family: 'Overpass-Light';
+  font-weight: 300;
+}
+
+/* BUTTON */
+%btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
