@@ -54,6 +54,26 @@ $red: #fa0000;
   font-family: 'Overpass-Light';
   font-weight: 300;
 }
+%om-300 {
+  font-family: 'OverpassMono-Bold';
+  font-weight: 700;
+}
+%om-300 {
+  font-family: 'Overpass-Light';
+  font-weight: 300;
+}
+%om-500 {
+  font-family: 'OverpassMono-Medium';
+  font-weight: 500;
+}
+%om-400 {
+  font-family: 'OverpassMono-Regular';
+  font-weight: 400;
+}
+%om-600 {
+  font-family: 'OverpassMono-SemiBold';
+  font-weight: 600;
+}
 
 /* BUTTON */
 %btn {

@@ -18,7 +18,7 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
-.container-content {
+.block__content {
   max-width: 1246px;
   margin: 0 auto;
 }
@@ -53,8 +53,11 @@ body {
   @media (max-width: 1000px) {
     font-size: 20px;
   }
+  @media (max-width: 400px) {
+    max-width: 160px;
+  }
 }
-.block__text {
+.block__slogan {
   text-indent: 630px;
   font-size: 51px;
   line-height: 118%;
