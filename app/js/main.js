@@ -22,4 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
   burger.addEventListener('click', () => {
     menu.classList.toggle('active');
   });
+
+  const controllBox = document.querySelector('.js-controll-box');
+  const controllBtn = document.querySelector('.js-controll-btn');
+
+  controllBtn.addEventListener('click', function () {
+    controllBox.classList.toggle('active');
+    controllBtn.classList.toggle('active');
+  });
 });

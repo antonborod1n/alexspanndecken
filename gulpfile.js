@@ -92,7 +92,7 @@ function pages() {
   return src('app/pages/*.html')
     .pipe(
       include({
-        includePaths: 'app/components',
+        includePaths: 'app/components/**',
       }),
     )
     .pipe(dest('app'))
@@ -108,7 +108,7 @@ function build() {
       'app/images/*.*',
       'app/images/sprite.svg',
       'app/fonts/*.*',
-      '!app/components/*.html',
+      '!app/components/**/*.html',
       '!app/pages/*.html',
       '!app/images/*.svg',
     ],
@@ -126,7 +126,7 @@ function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/images/src'], images);
   watch(['app/js/**/*.js', 'app/js/main.min.js'], scripts);
-  watch(['app/components/*', 'app/pages/*'], pages);
+  watch(['app/components/**', 'app/pages/*'], pages);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
