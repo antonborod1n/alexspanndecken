@@ -1536,7 +1536,6 @@
     }
   }
 }
-
 .contacts {
   padding: 100px 0 150px;
   @media (max-width: 1000px) {
@@ -1669,6 +1668,129 @@
     @media (max-width: 1000px) {
       width: 100%;
       height: 620px;
+    }
+  }
+}
+.error {
+  padding: 100px 0 200px;
+  @media (max-width: 1000px) {
+    padding: 50px 0 100px;
+  }
+  .error__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    @media (max-width: 1000px) {
+      flex-wrap: wrap;
+      gap: 0;
+    }
+  }
+  .error__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 50%;
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  .error__top {
+    max-width: 613px;
+    @media (max-width: 1000px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 450px) {
+      max-width: 100%;
+    }
+  }
+  .error__title {
+    @extend %inter-500;
+    font-size: 110px;
+    line-height: 100%;
+    color: $black;
+    color: $black1;
+    margin-bottom: 35px;
+    @media (max-width: 1000px) {
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+  }
+  .error__text {
+    font-size: 18px;
+    line-height: 135%;
+    color: #838383;
+  }
+  .error__box {
+    margin-bottom: 75px;
+    @media (max-width: 1000px) {
+      margin-bottom: 35px;
+    }
+  }
+  .error__link-box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .error__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %inter-500;
+    font-size: 24px;
+    line-height: 118%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 18px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 66px;
+    @media (max-width: 1000px) {
+      height: 50px;
+      font-size: 17px;
+    }
+  }
+  .error__link-catalog {
+    background-color: $black;
+    color: $whiteMain;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .error__link-main {
+    background-color: $whiteMain;
+    border: 1px solid $black;
+    opacity: 0.8;
+    color: $black;
+    &:hover {
+      background-color: $black;
+      color: $whiteMain;
+    }
+  }
+  .error__num {
+    @extend %inter-500;
+    font-size: 160px;
+    line-height: 70%;
+    opacity: 0.1;
+    color: $black;
+    align-self: flex-end;
+    @media (max-width: 1000px) {
+      align-self: center;
+      line-height: 100%;
+    }
+  }
+  .error__right {
+    width: 50%;
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  .error__img {
+    object-fit: cover;
+    @media (max-width: 1000px) {
+      height: auto;
     }
   }
 }
