@@ -21,10 +21,6 @@ body {
   flex-grow: 1;
 }
 .section {
-  padding: 100px 0 200px;
-  @media (max-width: 1000px) {
-    padding: 50px 0 100px;
-  }
   h1 {
     @extend %inter-500;
     font-size: 110px;
@@ -65,7 +61,7 @@ body {
     max-width: 1246px;
     margin: 0 auto;
   }
-  .section__content {
+  .section__grid {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 15px;
@@ -135,9 +131,41 @@ body {
     background-color: #c4c4c4;
     border-radius: 50%;
   }
+  .section__subtitle {
+    @extend %inter-800;
+    font-size: 24px;
+    line-height: 100%;
+    color: $gray;
+    @media (max-width: 1000px) {
+      font-size: 20px;
+    }
+    @media (max-width: 400px) {
+      max-width: 160px;
+    }
+  }
+  .section__slogan {
+    text-indent: 630px;
+    font-size: 51px;
+    line-height: 118%;
+    color: $black1;
+    margin-bottom: 50px;
+    & span {
+      color: $red;
+    }
+    @media (max-width: 1400px) {
+      text-indent: 430px;
+    }
+    @media (max-width: 1200px) {
+      text-indent: 0;
+    }
+    @media (max-width: 1000px) {
+      font-size: 33px;
+      margin-bottom: 25px;
+    }
+  }
 }
 
-.block {
+/* .block {
   margin-bottom: 250px;
   @media (max-width: 1000px) {
     margin-bottom: 100px;
@@ -156,39 +184,7 @@ body {
     font-size: 20px;
     gap: 25px;
   }
-}
-.block__title {
-  @extend %inter-800;
-  font-size: 24px;
-  line-height: 100%;
-  color: $gray;
-  @media (max-width: 1000px) {
-    font-size: 20px;
-  }
-  @media (max-width: 400px) {
-    max-width: 160px;
-  }
-}
-.block__slogan {
-  text-indent: 630px;
-  font-size: 51px;
-  line-height: 118%;
-  color: $black1;
-  margin-bottom: 50px;
-  & span {
-    color: $red;
-  }
-  @media (max-width: 1400px) {
-    text-indent: 430px;
-  }
-  @media (max-width: 1200px) {
-    text-indent: 0;
-  }
-  @media (max-width: 1000px) {
-    font-size: 33px;
-    margin-bottom: 25px;
-  }
-}
+} */
 
 .pagination {
   margin-bottom: 190px;

@@ -1795,6 +1795,10 @@
   }
 }
 .storage {
+  padding: 100px 0 200px;
+  @media (max-width: 1000px) {
+    padding: 50px 0 100px;
+  }
   .storage__top {
     margin-bottom: 75px;
     @media (max-width: 1000px) {
@@ -1847,14 +1851,108 @@
     color: #838383;
   }
 }
-
 .payment,
 .delivery {
+  padding: 100px 0 200px;
+  @media (max-width: 1000px) {
+    padding: 50px 0 100px;
+  }
   .payment__top,
   .delivery__top {
     margin-bottom: 75px;
     @media (max-width: 1000px) {
       margin-bottom: 50px;
+    }
+  }
+}
+.price {
+  padding: 100px 0;
+  @media (max-width: 1000px) {
+    padding: 50px 0 100px;
+  }
+  .price__title {
+    text-align: center;
+    margin-bottom: 75px;
+    @media (max-width: 1000px) {
+      text-align: left;
+      margin-bottom: 50px;
+    }
+  }
+  .price__content {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .price__form {
+    margin-top: 95px;
+    @media (max-width: 1000px) {
+      margin-top: 130px;
+    }
+  }
+}
+.form {
+  .form__content {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    @media (max-width: 1000px) {
+      gap: 25px;
+    }
+  }
+  .form__label,
+  .form__textarea-text,
+  .form__textarea-num {
+    @extend %om-400;
+    font-size: 14px;
+    line-height: 125%;
+    color: $black;
+  }
+  .form__title {
+    margin-bottom: 50px;
+  }
+  .form__input {
+    border: 1px solid #d6d6d6;
+    padding: 15px;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    color: $black;
+  }
+  .form__textarea {
+    border: 1px solid #d6d6d6;
+    padding: 15px;
+    width: 100%;
+    height: 130px;
+    outline: none;
+    color: $black;
+    resize: vertical;
+  }
+  .form__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .form__btn {
+    @extend %inter-400;
+    @extend %btn;
+    border-radius: 4px;
+    padding: 15px;
+    background-color: $black;
+    font-size: 24px;
+    line-height: 118%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $whiteMain;
+    transition: opacity 0.3s;
+    width: 100%;
+    height: 65px;
+    opacity: 1;
+    margin-top: 25px;
+    &:hover {
+      opacity: 0.6;
+    }
+    @media (max-width: 1000px) {
+      font-size: 17px;
+      height: 50px;
     }
   }
 }
