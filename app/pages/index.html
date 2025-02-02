@@ -3,28 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main</title>
+    <title>Index</title>
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
 
   <body>
-    <!--=include header.html -->
-
-    <main class="main">
-      <!--=include page-main-first.html -->
-      <!--=include about.html -->
-      <!--=include manufact.html -->
-      <!--=include masters.html -->
-      <!--=include order.html -->
-      <!--=include products.html -->
-      <!--=include mounting.html -->
-      <!--=include best.html -->
-      <!--=include support.html -->
-      <!--=include reviews.html -->
-      <!--=include training.html -->
+    <main class="main section">
+      <div class="section__container">
+        <div class="inner">
+          <h1 class="title">Pages</h1>
+          <ul class="list">
+            <li class="item"><a href="./main.html" class="link">main</a></li>
+            <li class="item"><a href="./404.html" class="link">404</a></li>
+            <li class="item"><a href="./about.html" class="link">about</a></li>
+            <li class="item"><a href="./contacts.html" class="link">contacts</a></li>
+            <li class="item"><a href="./delivery.html" class="link">delivery</a></li>
+            <li class="item"><a href="./payment.html" class="link">payment</a></li>
+            <li class="item"><a href="./portfolio.html" class="link">portfolio</a></li>
+            <li class="item"><a href="./price.html" class="link">price</a></li>
+            <li class="item"><a href="./services.html" class="link">services</a></li>
+            <li class="item"><a href="./storage.html" class="link">storage</a></li>
+            <li class="item"><a href="./storage1.html" class="link">storage1</a></li>
+            <li class="item"><a href="./training.html" class="link">training</a></li>
+          </ul>
+        </div>
+      </div>
     </main>
 
-    <!--=include footer.html -->
-    <script src="./js/main.min.js"></script>
+    <style>
+      .inner {
+        padding: 100px 0;
+      }
+      h1.title {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+      .item {
+        padding: 5px 0;
+      }
+      .link {
+        color: black;
+        transition: color 0.3s;
+      }
+      .link:hover {
+        color: rgb(39, 39, 39);
+      }
+    </style>
   </body>
 </html>

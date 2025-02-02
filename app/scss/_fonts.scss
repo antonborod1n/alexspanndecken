@@ -47,46 +47,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: 'Overpass-Bold';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Overpass-Bold'), url('../fonts/Overpass-Bold.woff2') format('woff2'),
-    url('../fonts/Overpass-Bold.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Overpass-SemiBold';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Overpass-SemiBold'), url('../fonts/Overpass-SemiBold.woff2') format('woff2'),
-    url('../fonts/Overpass-SemiBold.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Overpass-Medium';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Overpass-Medium'), url('../fonts/Overpass-Medium.woff2') format('woff2'),
-    url('../fonts/Overpass-Medium.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Overpass-Regular';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Overpass-Regular'), url('../fonts/Overpass-Regular.woff2') format('woff2'),
-    url('../fonts/Overpass-Regular.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Overpass-Light';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Overpass-Light'), url('../fonts/Overpass-Light.woff2') format('woff2'),
-    url('../fonts/Overpass-Light.woff') format('woff');
-  font-display: swap;
-}
-@font-face {
   font-family: 'OverpassMono-Bold';
   font-style: normal;
   font-weight: 700;

@@ -34,26 +34,6 @@ $red: #fa0000;
   font-family: 'Inter-Light';
   font-weight: 300;
 }
-%overpass-700 {
-  font-family: 'Overpass-Bold';
-  font-weight: 700;
-}
-%overpass-600 {
-  font-family: 'Overpass-SemiBold';
-  font-weight: 600;
-}
-%overpass-500 {
-  font-family: 'Overpass-Medium';
-  font-weight: 500;
-}
-%overpass-400 {
-  font-family: 'Overpass-Regular';
-  font-weight: 400;
-}
-%overpass-300 {
-  font-family: 'Overpass-Light';
-  font-weight: 300;
-}
 %om-700 {
   font-family: 'OverpassMono-Bold';
   font-weight: 700;
@@ -77,9 +57,40 @@ $red: #fa0000;
 
 /* BUTTON */
 %btn {
-  padding: 0;
+  @extend %inter-500;
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 17px 90px;
+  max-width: 612px;
+  height: 65px;
   background-color: transparent;
   border: none;
   cursor: pointer;
   transition: all 0.3s;
+  @media (max-width: 1000px) {
+    font-size: 17px;
+    padding: 10px;
+    height: 50px;
+  }
+}
+
+%btn-w {
+  @extend %btn;
+  color: rgba(30, 30, 30, 0.8);
+  background-color: $whiteMain;
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+%btn-b {
+  @extend %btn;
+  color: $whiteMain;
+  background-color: $black;
+  &:hover {
+    background-color: lighten($color: $black, $amount: 20%);
+  }
 }
