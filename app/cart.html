@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="page">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <nav class="header__left-menu">
+            <button class="header__left-menu-btn js-menu-btn">
+              <svg
+                width="30"
+                height="19"
+                viewBox="0 0 30 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect opacity="0.8" width="30" height="1" fill="white" />
+                <rect opacity="0.8" y="9" width="30" height="1" fill="white" />
+                <rect opacity="0.8" y="18" width="30" height="1" fill="white" />
+              </svg>
+            </button>
+            <ul class="header__left-list js-menu-list">
+              <li class="header__left-item">
+                <a class="header__menu-link" href="#">Preisanfrage</a>
+              </li>
+              <li class="header__left-item header__left-item-dropdown">
+                <a class="header__menu-link" href="#">Über uns</a>
+              </li>
+              <li class="header__left-item header__left-item-dropdown">
+                <a class="header__menu-link" href="#">Dienstleistungen</a>
+              </li>
+            </ul>
+            <a class="header__menu-link header__left-item-dropdown header__menu-link-catalog" href="#"
+              >Katalog</a
+            >
+          </nav>
+          <a class="header__logo-link" href="#">
+            <img
+              class="header__logo-img"
+              src="./images/icons/logo-main.svg"
+              alt="Logotip"
+              width="120"
+              height="57"
+            />
+          </a>
+          <div class="header__menu header__right-menu">
+            <div class="header__box">
+              <div class="header__input-search">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g opacity="0.25">
+                    <path
+                      d="M21 21L15.0001 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                </svg>
+                <input class="header__input" type="text" placeholder="Suchen..." />
+              </div>
+              <ul class="header__right-list">
+                <li class="header__menu-item">
+                  <a class="header__menu-link header__menu-login" href="#">Einloggen</a>
+                </li>
+                <li class="header__right-item">
+                  <a class="header__menu-link header__menu-cart" href="#">Warenkorb (<span>0</span>)</a>
+                </li>
+              </ul>
+            </div>
+            <button class="header__btn">Fordern Sie einen Anruf an</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+
+    <main class="main">
+      <section class="cart section block">
+        <div class="container">
+          <div class="cart__inner">
+            <h1 class="cart__title">Zur Kasse</h1>
+            <div class="cart__content">
+              <div class="cart__left">
+                <div class="cart__left-row">
+                  <h2 class="cart__left-subtitle">Personal information</h2>
+                  <dl class="cart__left-list">
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Vorname</dt>
+                      <dd class="cart__left-val">Alex</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Nachname</dt>
+                      <dd class="cart__left-val">alexspan</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Telefon</dt>
+                      <dd class="cart__left-val">+ 0172 58 21 433</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">E-Mail</dt>
+                      <dd class="cart__left-val">info@alexspanndecken.de</dd>
+                    </div>
+                  </dl>
+                </div>
+                <div class="cart__left-row">
+                  <div class="cart__left-top">
+                    <h2 class="cart__left-subtitle">Rechnungsadresse</h2>
+                    <button class="cart__left-edit-btn js-cart-edit-btn">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.5 21.5001L8.04927 19.3657C8.40421 19.2292 8.58168 19.161 8.74772 19.0718C8.8952 18.9927 9.0358 18.9013 9.16804 18.7987C9.31692 18.6831 9.45137 18.5487 9.72028 18.2798L21 7.00006C22.1046 5.89549 22.1046 4.10463 21 3.00006C19.8955 1.89549 18.1046 1.89549 17 3.00006L5.72028 14.2798C5.45138 14.5487 5.31692 14.6831 5.20139 14.832C5.09877 14.9643 5.0074 15.1049 4.92823 15.2523C4.83911 15.4184 4.77085 15.5959 4.63433 15.9508L2.5 21.5001ZM2.5 21.5001L4.55812 16.149C4.7054 15.7661 4.77903 15.5746 4.90534 15.4869C5.01572 15.4103 5.1523 15.3813 5.2843 15.4065C5.43533 15.4354 5.58038 15.5804 5.87048 15.8705L8.12957 18.1296C8.41967 18.4197 8.56472 18.5648 8.59356 18.7158C8.61877 18.8478 8.58979 18.9844 8.51314 19.0947C8.42545 19.2211 8.23399 19.2947 7.85107 19.442L2.5 21.5001Z"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <dl class="cart__left-list">
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">name</dt>
+                      <dd class="cart__left-val">Alex</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Straßse</dt>
+                      <dd class="cart__left-val">Unter den Linden</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">PLZ</dt>
+                      <dd class="cart__left-val">10365</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Ort</dt>
+                      <dd class="cart__left-val">Berlin</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Land</dt>
+                      <dd class="cart__left-val">Germany (Deutschland)</dd>
+                    </div>
+                  </dl>
+                  <a class="cart__left-link" href="#">Aus gespeicherten auswählen</a>
+                </div>
+                <div class="cart__left-row">
+                  <div class="cart__left-top">
+                    <h2 class="cart__left-subtitle">Lieferadresse</h2>
+                    <button class="cart__left-edit-btn js-cart-edit-btn">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.5 21.5001L8.04927 19.3657C8.40421 19.2292 8.58168 19.161 8.74772 19.0718C8.8952 18.9927 9.0358 18.9013 9.16804 18.7987C9.31692 18.6831 9.45137 18.5487 9.72028 18.2798L21 7.00006C22.1046 5.89549 22.1046 4.10463 21 3.00006C19.8955 1.89549 18.1046 1.89549 17 3.00006L5.72028 14.2798C5.45138 14.5487 5.31692 14.6831 5.20139 14.832C5.09877 14.9643 5.0074 15.1049 4.92823 15.2523C4.83911 15.4184 4.77085 15.5959 4.63433 15.9508L2.5 21.5001ZM2.5 21.5001L4.55812 16.149C4.7054 15.7661 4.77903 15.5746 4.90534 15.4869C5.01572 15.4103 5.1523 15.3813 5.2843 15.4065C5.43533 15.4354 5.58038 15.5804 5.87048 15.8705L8.12957 18.1296C8.41967 18.4197 8.56472 18.5648 8.59356 18.7158C8.61877 18.8478 8.58979 18.9844 8.51314 19.0947C8.42545 19.2211 8.23399 19.2947 7.85107 19.442L2.5 21.5001Z"
+                          stroke="black"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <dl class="cart__left-list">
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">name</dt>
+                      <dd class="cart__left-val">Alex</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Straßse</dt>
+                      <dd class="cart__left-val">Unter den Linden</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">PLZ</dt>
+                      <dd class="cart__left-val">10365</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Ort</dt>
+                      <dd class="cart__left-val">Berlin</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Land</dt>
+                      <dd class="cart__left-val">Germany (Deutschland)</dd>
+                    </div>
+                  </dl>
+                  <a class="cart__left-link" href="#">Aus gespeicherten auswählen</a>
+                </div>
+                <div class="cart__left-row">
+                  <div class="cart__left-top">
+                    <h2 class="cart__left-subtitle">Lieferinformationen</h2>
+                  </div>
+                  <div class="cart__left-delivery">
+                    <div class="cart__left-delivery">
+                      <input id="abhol" class="cart__left-input" type="radio" value="abhol" />
+                      <label class="cart__left-label" for="abhol">Abholservice</label>
+                    </div>
+                    <div class="cart__left-delivery">
+                      <input id="usp" class="cart__left-input" type="radio" value="usp" />
+                      <label class="cart__left-label" for="usp">UPS</label>
+                    </div>
+                    <div class="cart__left-delivery">
+                      <input id="dhl" class="cart__left-input" type="radio" value="dhl" />
+                      <label class="cart__left-label" for="dhl">DHL</label>
+                    </div>
+                    <div class="cart__left-delivery">
+                      <input id="gls" class="cart__left-input" type="radio" value="gls" />
+                      <label class="cart__left-label" for="gls">GLS</label>
+                    </div>
+                  </div>
+                  <a class="cart__left-link" href="#">Aus gespeicherten auswählen</a>
+                </div>
+              </div>
+              <div class="cart__right">
+                <div class="cart__left-row">
+                  <h2 class="cart__left-subtitle">Warenkorb (<span>3</span>)</h2>
+                  <div class="cart__goods">
+                    <div class="cart__goods-item">
+                      <div class="cart__goods-img-box">
+                        <picture class="cart__goods-pic">
+                          <source
+                            srcset="../../images/content/catalog/product/1.webp"
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="../../images/content/catalog/product/1.avif"
+                            type="image/avif"
+                          />
+                          <img
+                            src="../../images/content/catalog/product/1.png"
+                            class="cart__goods-img"
+                            alt="ALU Trennprofil für Lichtlinien schwarz super breit 7 cm mit Abschlussleiste"
+                            width="122"
+                            height="122"
+                          />
+                        </picture>
+                      </div>
+                      <div class="cart__goods-info">
+                        <div class="cart__goods-top">
+                          <h3 class="cart__goods-title">
+                            ALU Trennprofil für Lichtlinien schwarz super breit 7 cm mit Abschlussleiste
+                          </h3>
+                          <div class="cart__goods-price">€ 49</div>
+                        </div>
+                        <div class="cart__goods-numb">100 м</div>
+                        <button class="cart__goods-delete">Löschen</button>
+                      </div>
+                    </div>
+                    <div class="cart__goods-item">
+                      <div class="cart__goods-img-box">
+                        <picture class="cart__goods-pic">
+                          <source
+                            srcset="../../images/content/catalog/product/1.webp"
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="../../images/content/catalog/product/1.avif"
+                            type="image/avif"
+                          />
+                          <img
+                            src="../../images/content/catalog/product/1.png"
+                            class="cart__goods-img"
+                            alt="ALU Trennprofil für Lichtlinien schwarz super breit 7 cm mit Abschlussleiste"
+                            width="122"
+                            height="122"
+                          />
+                        </picture>
+                      </div>
+                      <div class="cart__goods-info">
+                        <div class="cart__goods-top">
+                          <h3 class="cart__goods-title">
+                            ALU Trennprofil für Lichtlinien schwarz super breit 7 cm mit Abschlussleiste
+                          </h3>
+                          <div class="cart__goods-price">€ 49</div>
+                        </div>
+                        <div class="cart__goods-numb">100 м</div>
+                        <button class="cart__goods-delete">Löschen</button>
+                      </div>
+                    </div>
+                    <div class="cart__goods-item">
+                      <div class="cart__goods-img-box">
+                        <picture class="cart__goods-pic">
+                          <source
+                            srcset="../../images/content/catalog/product/1.webp"
+                            type="image/webp"
+                          />
+                          <source
+                            srcset="../../images/content/catalog/product/1.avif"
+                            type="image/avif"
+                          />
+                          <img
+                            src="../../images/content/catalog/product/1.png"
+                            class="cart__goods-img"
+                            alt="ALU Trennprofil für Lichtlinien schwarz super breit 7 cm mit Abschlussleiste"
+                            width="122"
+                            height="122"
+                          />
+                        </picture>
+                      </div>
+                      <div class="cart__goods-info">
+                        <div class="cart__goods-top">
+                          <h3 class="cart__goods-title">
+                            ALU Trennprofil für Lichtlinien schwarz super breit 7 cm mit Abschlussleiste
+                          </h3>
+                          <div class="cart__goods-price">€ 49</div>
+                        </div>
+                        <div class="cart__goods-numb">100 м</div>
+                        <button class="cart__goods-delete">Löschen</button>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="cart__left-link" href="#">Aktionscode eingeben</a>
+                  <dl class="cart__left-list">
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Lieferung</dt>
+                      <dd class="cart__left-val">€ 10</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Total</dt>
+                      <dd class="cart__left-val">€ 139</dd>
+                    </div>
+                    <div class="cart__left-item">
+                      <dt class="cart__left-term">Gesamtsumme</dt>
+                      <dd class="cart__left-val">€ 139</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="cart__bottom">
+              <p class="cart__bottom-text">
+                * Die Lieferung erfolgt bis 12:00 Uhr und wird innerhalb von nur einem Tag mit UPS
+                geliefert. Die Lieferung erfolgt nicht am Tag der Verhinderung und des Versands.
+              </p>
+              <button class="cart__bottom-btn">Bestellen</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="footer">
+
+      <div class="container">
+
+        <div class="footer__inner">
+
+          <div class="footer__logo">
+
+            <a class="logo-text__link" href="#">
+
+              <img class="logo-text__img" src="./images/icons/logo-text.svg" alt="Logotip" />
+
+            </a>
+
+          </div>
+
+          <div class="footer__grid">
+
+            <div class="footer__col">
+
+              <div class="footer__col-title">Über das Unternehmen</div>
+
+              <ul class="footer__list">
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Startseite</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Über uns</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Galerie</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Zubehör</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Spanndeckendesign</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Preisanfrage</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Rezensionen</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Kontakte</a>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="footer__col">
+
+              <div class="footer__col-title">Katalog</div>
+
+              <ul class="footer__list">
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Alle</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Spanndecke</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Befestigungsprofile</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Spanndecken Beleuchtung</a>
+
+                </li>
+
+                <li class="footer__item">
+
+                  <a class="footer__link">Spanndecken Zubehör</a>
+
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="footer__col">
+
+              <div class="footer__box">
+
+                <div class="footer__col-title">Arbeitszeit</div>
+
+                <div class="footer__working">Mo. - Fr. 08:30 - 17:00 Sa. nach Vereinbarung</div>
+
+              </div>
+
+              <div class="footer__box">
+
+                <div class="footer__col-title">Adresse</div>
+
+                <address class="footer__address">Herzogstr. 30 44807 Bochum</address>
+
+              </div>
+
+              <div class="footer__box footer__box-tel">
+
+                <div class="footer__col-title">Telefon</div>
+
+                <a class="footer__link footer__link-tel" href="tel:01725821433">+ 0172 58 21 433</a>
+
+                <a class="footer__link footer__link-tel" href="tel:01729504032">+ 0172 95 04 032</a>
+
+              </div>
+
+            </div>
+
+            <div class="footer__col">
+
+              <div class="footer__box">
+
+                <div class="footer__col-title">E-Mail</div>
+
+                <a class="footer__link" href="mailto:info@alexspanndecken.de"
+
+                  >info@alexspanndecken.de</a
+
+                >
+
+              </div>
+
+              <div class="footer__social">
+
+                <div class="footer__col-title">Soziale Netzwerke</div>
+
+                <ul class="footer__social-list">
+
+                  <li class="footer__social-item">
+
+                    <a class="footer__social-link" href="https://www.facebook.com/" target="_blank">
+
+                      <svg
+
+                        width="32"
+
+                        height="32"
+
+                        viewBox="0 0 32 32"
+
+                        fill="none"
+
+                        xmlns="http://www.w3.org/2000/svg"
+
+                      >
+
+                        <path
+
+                          d="M13.4588 16.9848V28H17.9059V16.9848H21.2941L22 12.6809H17.9059V9.17933C17.9059 8.66187 18.25 8.15805 19.1765 8.15805H22V4H17.4118C15.25 4 13.4588 5.72662 13.4588 8.15805V12.6809H10V16.9848H13.4588Z"
+
+                          fill="white"
+
+                        />
+
+                      </svg>
+
+                    </a>
+
+                  </li>
+
+                  <li class="footer__social-item">
+
+                    <a class="footer__social-link" href="https://www.tiktok.com/" target="_blank">
+
+                      <svg
+
+                        width="32"
+
+                        height="32"
+
+                        viewBox="0 0 32 32"
+
+                        fill="none"
+
+                        xmlns="http://www.w3.org/2000/svg"
+
+                      >
+
+                        <path
+
+                          d="M16.2308 19.8462L16.2308 3.99998H20.1538C20.1538 3.99998 20.1895 4.85354 20.3077 5.3846C20.4834 6.17413 20.6214 6.53844 20.9231 7.0769C21.3499 7.8387 21.8462 8.3846 22.4615 8.84615C23.0769 9.30771 24.3846 9.84614 25.3077 9.84614H26.2308V13.6923H25.3077C24.5385 13.6923 23.3077 13.4615 22.3846 13.0769C21.4615 12.6923 20.3077 11.7692 20.3077 11.7692H20.0769V19.8462C20.0769 24.9231 16.7018 28 12.5385 28C8.37508 28 5 24.6249 5 20.4615C5 16.2982 8.37508 12.9231 12.5385 12.9231L13.7692 12.9231V16.8462H12.5385C10.3846 16.8462 8.94409 18.4649 8.92308 20.4615C8.90184 22.4795 10.4615 24.1538 12.5385 24.1538C15.9231 24.1538 16.2308 20.6154 16.2308 19.8462Z"
+
+                          fill="white"
+
+                        />
+
+                      </svg>
+
+                    </a>
+
+                  </li>
+
+                  <li class="footer__social-item">
+
+                    <a class="footer__social-link" href="https://www.instagram.com/" target="_blank">
+
+                      <svg
+
+                        width="32"
+
+                        height="32"
+
+                        viewBox="0 0 32 32"
+
+                        fill="none"
+
+                        xmlns="http://www.w3.org/2000/svg"
+
+                      >
+
+                        <path
+
+                          fill-rule="evenodd"
+
+                          clip-rule="evenodd"
+
+                          d="M9.60919 4C6.57471 4 4 6.65649 4 9.58778V22.3206C4 25.3435 6.57471 28 9.60919 28H22.4828C25.3333 28 28 25.3435 28 22.3206V9.58778C28 6.65649 25.3333 4 22.2989 4H9.60919ZM5.15862 9.58778C5.2 7.17852 7.2 5.05649 9.60919 5.05649H22.2989C24.6521 5.05649 26.9333 7.17852 26.9333 9.58778V22.3206C26.9333 24.3785 24.6521 26.9435 22.2989 26.9435H9.60919C7.05212 26.9435 5.15862 24.7785 5.15862 22.3206V9.58778Z"
+
+                          fill="white"
+
+                        />
+
+                        <path
+
+                          fill-rule="evenodd"
+
+                          clip-rule="evenodd"
+
+                          d="M9.60919 5.05649C7.2 5.05649 5.2 7.17852 5.15862 9.58778V22.3206C5.15862 24.7785 7.05212 26.9435 9.60919 26.9435H22.2989C24.6521 26.9435 26.9333 24.3785 26.9333 22.3206V9.58778C26.9333 7.17852 24.6521 5.05649 22.2989 5.05649H9.60919ZM9.92108 16.1893C9.91762 13.0185 12.6353 10.5989 15.8061 10.5954C18.9265 10.592 21.589 12.8813 21.6912 16C21.7966 19.2172 19.025 21.7691 15.8061 21.771C12.6386 21.7728 9.92454 19.3569 9.92108 16.1893ZM20.8636 9.61985C20.8636 8.91022 21.4418 8.34391 22.151 8.31946C22.8861 8.29411 23.5303 8.88434 23.5303 9.61985C23.5303 10.3374 22.8861 10.9276 22.151 10.9023C21.4418 10.8778 20.8636 10.3295 20.8636 9.61985Z"
+
+                          fill="white"
+
+                        />
+
+                      </svg>
+
+                    </a>
+
+                  </li>
+
+                  <li class="footer__social-item">
+
+                    <a class="footer__social-link" href="https://telegram.org/" target="_blank">
+
+                      <svg
+
+                        width="32"
+
+                        height="32"
+
+                        viewBox="0 0 32 32"
+
+                        fill="none"
+
+                        xmlns="http://www.w3.org/2000/svg"
+
+                      >
+
+                        <path
+
+                          d="M0.508516 13.9998L7.17576 16.4567L9.77483 24.7207C9.88783 25.2791 10.5659 25.3908 11.0179 25.0558L14.747 22.0405C15.086 21.7055 15.651 21.7055 16.103 22.0405L22.7703 26.8426C23.2223 27.1776 23.9003 26.9543 24.0133 26.3959L28.9855 2.94383C29.0985 2.38545 28.5334 1.82707 27.9684 2.05043L0.508516 12.548C-0.169505 12.7714 -0.169505 13.7764 0.508516 13.9998ZM9.43583 15.2282L22.5442 7.29921C22.7702 7.18754 22.9963 7.52257 22.7703 7.63425L12.0349 17.5735C11.6959 17.9085 11.3569 18.3552 11.3569 18.9136L11.0179 21.5938C11.0179 21.9288 10.4529 22.0405 10.3398 21.5938L8.98379 16.68C8.64478 16.1217 8.87081 15.4516 9.43583 15.2282Z"
+
+                          fill="white"
+
+                        />
+
+                      </svg>
+
+                    </a>
+
+                  </li>
+
+                  <li class="footer__social-item">
+
+                    <a class="footer__social-link" href="https://www.youtube.com/" target="_blank">
+
+                      <svg
+
+                        width="32"
+
+                        height="32"
+
+                        viewBox="0 0 32 32"
+
+                        fill="none"
+
+                        xmlns="http://www.w3.org/2000/svg"
+
+                      >
+
+                        <path
+
+                          fill-rule="evenodd"
+
+                          clip-rule="evenodd"
+
+                          d="M7.42858 6H24.5714C28 6 30 8.44666 30 11.7143V20.5715C30 23.7143 27.883 26 24.5714 26H7.42858C4.35055 26 1.99999 23.6495 2 20.5715V11.7143C1.99998 8.57141 3.85247 5.99997 7.42858 6ZM12.8572 20.8572V11.7143L20.8572 16.2858L12.8572 20.8572Z"
+
+                          fill="white"
+
+                        />
+
+                      </svg>
+
+                    </a>
+
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="footer__copy">
+
+          <p class="footer__copy-text">© Copyright Alex Spanndecken</p>
+
+          <ul class="footer__copy-list">
+
+            <li class="footer__copy-item footer__copy-item1">
+
+              <a class="footer__copy-link footer__link">Zahlungs-und Lieferbedingungen</a>
+
+            </li>
+
+            <li class="footer__copy-item footer__copy-item2">
+
+              <a class="footer__copy-link footer__link">Impressum und Datenschutz</a>
+
+            </li>
+
+            <li class="footer__copy-item footer__copy-item3">
+
+              <a class="footer__copy-link footer__link">Design und Entwicklung DG</a>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+    
+    <script src="./js/main.min.js"></script>
+  </body>
+</html>

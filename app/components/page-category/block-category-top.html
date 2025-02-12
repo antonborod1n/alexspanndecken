@@ -1,0 +1,193 @@
+<section class="products">
+  <div class="container">
+    <h1 class="catalog__title">Profile</h1>
+    <div class="filter">
+      <div class="filter__box">
+        <div class="filter__container">
+          <div class="filter__group">
+            <div class="filter__group-name active" id="type">
+              Typ
+              <svg
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L7 7L13 1"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="filter__group-list1">
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="red">red</button>
+              </li>
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="black">black</button>
+              </li>
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="white">white</button>
+              </li>
+            </ul>
+          </div>
+          <div class="filter__group">
+            <div class="filter__group-name" id="brand">
+              Marke
+              <svg
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L7 7L13 1"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="filter__group-list">
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="red">red</button>
+              </li>
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="black">black</button>
+              </li>
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="white">white</button>
+              </li>
+            </ul>
+          </div>
+          <div class="filter__group">
+            <div class="filter__group-name" id="material">
+              Werkstoff
+              <svg
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L7 7L13 1"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="filter__group-list">
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="red">red</button>
+              </li>
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="black">black</button>
+              </li>
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="white">white</button>
+              </li>
+            </ul>
+          </div>
+          <div class="filter__group">
+            <div class="filter__group-name" id="color">
+              Farbe
+              <svg
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L7 7L13 1"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <ul class="filter__group-list">
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="red">red</button>
+              </li>
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="black">black</button>
+              </li>
+              <li class="filter__group-item">
+                <button class="filter__group-btn" value="white">white</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter__container">
+          <div class="filter__sort-buttons">
+            <button class="filter__sort-btn" data-sort="date">
+              nach Rabatt
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g opacity="0.35">
+                  <rect x="2" y="4" width="8" height="2" rx="1" fill="black" />
+                  <rect x="2" y="7" width="6" height="2" rx="1" fill="black" />
+                  <rect x="2" y="10" width="4" height="2" rx="1" fill="black" />
+                </g>
+              </svg>
+            </button>
+            <button class="filter__sort-btn" data-sort="availability">nach Verfügbarkeit</button>
+            <button class="filter__sort-btn" data-sort="price">
+              nach Preis
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g opacity="0.35">
+                  <rect x="2" y="4" width="8" height="2" rx="1" fill="black" />
+                  <rect x="2" y="7" width="6" height="2" rx="1" fill="black" />
+                  <rect x="2" y="10" width="4" height="2" rx="1" fill="black" />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="filter__box filter__box-tips">
+        <div class="selected-filters" id="selectedFilters"></div>
+        <button class="filter__reset-btn" id="resetFilters">
+          Alles löschen
+          <svg
+            width="8"
+            height="8"
+            viewBox="0 0 8 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1L7 7M7 1L4 4L1 7"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -10,7 +10,6 @@ const clean = require('gulp-clean');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 const newer = require('gulp-newer');
-const svgSprite = require('gulp-svg-sprite');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const fonter = require('gulp-fonter');
 const include = require('gulp-include');
@@ -43,7 +42,7 @@ function scripts() {
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'));
-  /* .pipe(browserSync.stream()); */
+  /*  .pipe(browserSync.stream()); */
 }
 
 function images() {
@@ -58,21 +57,6 @@ function images() {
 
     .pipe(newer('app/images'))
     .pipe(imagemin())
-    .pipe(dest('app/images'));
-}
-
-function sprite() {
-  return src('app/images/icons/*.svg')
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: '../sprite.svg',
-            example: true,
-          },
-        },
-      }),
-    )
     .pipe(dest('app/images'));
 }
 
@@ -106,7 +90,6 @@ function build() {
       'app/css/style.min.css',
       'app/js/main.min.js',
       'app/images/*.*',
-      'app/images/sprite.svg',
       'app/fonts/*.*',
       '!app/components/**/*.html',
       '!app/pages/*.html',
@@ -136,7 +119,6 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 
 exports.images = images;
-exports.sprite = sprite;
 exports.fonts = fonts;
 exports.pages = pages;
 exports.cleanDist = cleanDist;
